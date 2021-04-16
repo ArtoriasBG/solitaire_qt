@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GameWindow</class>
+ <widget class="QMainWindow" name="GameWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1600</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>GameWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="ClickableView" name="graphicsView"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionText"/>
+   <addaction name="actionNew_Game"/>
+   <addaction name="separator"/>
+   <addaction name="actionHint"/>
+   <addaction name="actionSwap"/>
+   <addaction name="actionReveal"/>
+   <addaction name="separator"/>
+   <addaction name="actionUndo"/>
+   <addaction name="actionFinish_Reveal"/>
+   <addaction name="actionCancel_Swap"/>
+  </widget>
+  <action name="actionText">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Actions:</string>
+   </property>
+  </action>
+  <action name="actionHint">
+   <property name="text">
+    <string>Hint</string>
+   </property>
+  </action>
+  <action name="actionSwap">
+   <property name="text">
+    <string>Swap</string>
+   </property>
+   <property name="toolTip">
+    <string>change the position of 2 cards</string>
+   </property>
+  </action>
+  <action name="actionReveal">
+   <property name="text">
+    <string>Reveal</string>
+   </property>
+  </action>
+  <action name="actionUndo">
+   <property name="text">
+    <string>Undo</string>
+   </property>
+  </action>
+  <action name="actionNew_Game">
+   <property name="text">
+    <string>New Game</string>
+   </property>
+  </action>
+  <action name="actionFinish_Reveal">
+   <property name="text">
+    <string>Finish Reveal</string>
+   </property>
+   <property name="toolTip">
+    <string>finish reveal</string>
+   </property>
+  </action>
+  <action name="actionCancel_Swap">
+   <property name="text">
+    <string>Cancel Swap</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ClickableView</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">clickableview.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
